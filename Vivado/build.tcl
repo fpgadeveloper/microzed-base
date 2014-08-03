@@ -27,19 +27,16 @@
 #
 # 3. The following remote source files that were added to the original project:-
 #
-#    "E:/Github/fpgadeveloper/microzed-base/Vivado/microzed_base.srcs/sources_1/bd/design_1/design_1.bd"
-#    "E:/Github/fpgadeveloper/microzed-base/Vivado/microzed_base.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd"
+#    "<projectdir>/src/bd/design_1.bd"
+#    "<projectdir>/src/hdl/design_1_wrapper.vhd"
 #
 #*****************************************************************************************
 
-# Set the reference directory for source file relative paths (by default the value is script directory path)
-set origin_dir "."
-
-# Set the directory path for the original project from where this script was exported
-set orig_proj_dir "[file normalize "$origin_dir/"]"
+# Set the reference directory to where the script is
+set origin_dir [file dirname [info script]]
 
 # Create project
-create_project microzed_base ./microzed_base
+create_project microzed_base $origin_dir/microzed_base
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
@@ -59,13 +56,13 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
 set files [list \
- "[file normalize "$origin_dir/microzed_base.srcs/sources_1/bd/design_1/design_1.bd"]"\
- "[file normalize "$origin_dir/microzed_base.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd"]"\
+ "[file normalize "$origin_dir/src/bd/design_1.bd"]"\
+ "[file normalize "$origin_dir/src/hdl/design_1_wrapper.vhd"]"\
 ]
 add_files -norecurse -fileset $obj $files
 
 # Set 'sources_1' fileset file properties for remote files
-set file "$origin_dir/microzed_base.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd"
+set file "$origin_dir/src/hdl/design_1_wrapper.vhd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property "file_type" "VHDL" $file_obj
