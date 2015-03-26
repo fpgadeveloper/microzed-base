@@ -10,7 +10,7 @@ the Zynq PS and is designed for and tested on the MicroZed.
 
 ### Requirements
 
-* Vivado 2014.2
+* Vivado 2014.4
 * MicroZed
 
 ### License
