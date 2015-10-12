@@ -11,7 +11,22 @@ the Zynq PS and is designed for and tested on the MicroZed.
 ### Requirements
 
 * Vivado 2015.3
-* MicroZed
+* [MicroZed 7Z010](http://microzed.org "MicroZed 7Z010")
+
+### Installation of MicroZed board definition files
+
+To use this project, you must first install the board definition files
+for the MicroZed into your Vivado installation.
+
+The following folders contain the board definition files and can be found in this project repository at this location:
+
+https://github.com/fpgadeveloper/microzed-base/tree/master/Vivado/boards/board_files
+
+* `microzed_7010`
+* `microzed_7020`
+
+Copy those folders and their contents into the `C:\Xilinx\Vivado\2015.3\data\boards\board_files` folder (this may
+be different on your machine, depending on your Vivado installation directory).
 
 ### License
 
