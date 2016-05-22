@@ -1,16 +1,6 @@
 ################################################################
-# Check if script is running in correct Vivado version.
+# Block diagram build script
 ################################################################
-set scripts_vivado_version 2016.1
-set current_vivado_version [version -short]
-
-if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
-   puts ""
-   puts "ERROR: This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."
-
-   return 1
-}
-
 set design_name design_1
 
 # CHECKING IF PROJECT EXISTS
@@ -50,7 +40,7 @@ current_bd_instance $parentObj
 
 # Add the Processor System and apply board preset
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7 processing_system7_0
 endgroup
 apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
 
