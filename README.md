@@ -8,9 +8,13 @@ Base project for the MicroZed
 This project is a base system for the MicroZed. The design contains only
 the Zynq PS and is designed for and tested on the MicroZed.
 
+A tutorial for recreating this project in the Vivado GUI can be found here:
+
+http://www.fpgadeveloper.com/2014/07/creating-a-base-system-for-the-zynq-in-vivado.html
+
 ### Requirements
 
-* Vivado 2016.2
+* Vivado 2016.3
 * [MicroZed 7Z010](http://microzed.org "MicroZed 7Z010")
 
 ### Installation of MicroZed board definition files
@@ -25,7 +29,7 @@ https://github.com/fpgadeveloper/microzed-base/tree/master/Vivado/boards/board_f
 * `microzed_7010`
 * `microzed_7020`
 
-Copy those folders and their contents into the `C:\Xilinx\Vivado\2016.2\data\boards\board_files` folder (this may
+Copy those folders and their contents into the `C:\Xilinx\Vivado\2016.3\data\boards\board_files` folder (this may
 be different on your machine, depending on your Vivado installation directory).
 
 ### License
@@ -38,11 +42,9 @@ If you port this project to another hardware platform, please send me the
 code or push it onto GitHub and send me the link so I can post it on my
 website. The more people that benefit, the better.
 
-### About the author
+### About us
 
-I'm an FPGA consultant and I provide FPGA design services and training to
-innovative companies around the world. I believe in sharing knowledge and
-I regularly contribute to the open source community.
-
-Jeff Johnson
-http://www.fpgadeveloper.com
+This project was developed by [Opsero Inc.](http://opsero.com "Opsero Inc."),
+a tight-knit team of FPGA experts delivering FPGA products and design services to start-ups and tech companies. 
+Follow our blog, [FPGA Developer](http://www.fpgadeveloper.com "FPGA Developer"), for news, tutorials and
+updates on the awesome projects we work on.
