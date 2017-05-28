@@ -1,7 +1,6 @@
 ################################################################
 # Block diagram build script
 ################################################################
-set design_name design_1
 
 # CHECKING IF PROJECT EXISTS
 if { [get_projects -quiet] eq "" } {
@@ -39,15 +38,11 @@ set oldCurInst [current_bd_instance .]
 current_bd_instance $parentObj
 
 # Add the Processor System and apply board preset
-startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7 processing_system7_0
-endgroup
 apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
 
 # Configure the PS: Generate 100MHz clock, Enable GP0
-startgroup
 set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1}] [get_bd_cells processing_system7_0]
-endgroup
 
 # Connect the FCLK_CLK0 to the PS GP0
 connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
