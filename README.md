@@ -3,6 +3,15 @@ microzed-base
 
 Base project for the MicroZed
 
+## Requirements
+
+This project is designed for Vivado 2017.2. If you are using an older version of Vivado, then you *MUST* use an older version
+of this repository. Refer to the [list of commits](https://github.com/fpgadeveloper/microzed-base/commits/master "list of commits")
+to find links to the older versions of this repository.
+
+* Vivado 2017.2
+* [MicroZed 7Z010](http://microzed.org "MicroZed 7Z010")
+
 ## Description
 
 This project is a base system for the MicroZed. The design contains only
@@ -11,11 +20,6 @@ the Zynq PS and is designed for and tested on the MicroZed.
 A tutorial for recreating this project in the Vivado GUI can be found here:
 
 http://www.fpgadeveloper.com/2014/07/creating-a-base-system-for-the-zynq-in-vivado.html
-
-## Requirements
-
-* Vivado 2017.2
-* [MicroZed 7Z010](http://microzed.org "MicroZed 7Z010")
 
 ## Installation of MicroZed board definition files
 
