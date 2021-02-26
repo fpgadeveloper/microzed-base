@@ -5,11 +5,11 @@ Base project for the MicroZed
 
 ## Requirements
 
-This project is designed for Vivado 2019.2. If you are using an older version of Vivado, then you *MUST* use an older version
+This project is designed for Vivado 2020.2. If you are using an older version of Vivado, then you *MUST* use an older version
 of this repository. Refer to the [list of commits](https://github.com/fpgadeveloper/microzed-base/commits/master "list of commits")
 to find links to the older versions of this repository.
 
-* Vivado 2019.2
+* Vivado 2020.2
 * [MicroZed 7Z010](http://microzed.org "MicroZed 7Z010")
 
 ## Description
@@ -33,7 +33,7 @@ https://github.com/fpgadeveloper/microzed-base/tree/master/Vivado/boards/board_f
 * `microzed_7010`
 * `microzed_7020`
 
-Copy those folders and their contents into the `C:\Xilinx\Vivado\2019.2\data\boards\board_files` folder (this may
+Copy those folders and their contents into the `C:\Xilinx\Vivado\2020.2\data\boards\board_files` folder (this may
 be different on your machine, depending on your Vivado installation directory).
 
 ## Troubleshooting
